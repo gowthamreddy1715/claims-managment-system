@@ -1,0 +1,16 @@
+services:
+  backend:
+    build: ./Backend
+    ports:
+      - "1715:1715"
+    volumes:
+      - ./Backend:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  frontend:
+    build: ./Frontend/cms_frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend

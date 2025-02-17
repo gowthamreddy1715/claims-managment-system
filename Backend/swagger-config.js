@@ -9,7 +9,12 @@ const options = {
       version: "1.0.0",
       description: "API Documentation for the Claims Management System",
     },
-    servers: [{ url: "http://localhost:1715/", description: "Render Link" }],
+    servers: [
+      {
+        url: "https://claims-managment-system.onrender.com",
+        description: "Render Link",
+      },
+    ],
     components: {
       securitySchemes: {
         bearerAuth: {
